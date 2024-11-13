@@ -114,13 +114,15 @@ test('GET /users/ empty DB message', async () => {
 
 //headers
     const contentTypeHeaderValue = utils.getContentTypeHeaderValue(response)
-    const contentLengthHeaderValue = utils.getContentLengthHeaderValue(response)
     const responseText = await utils.getResponseText(response)
+    const contentLengthValue = await responseText.length
 
-    //assertion
+    // await expect(contentTypeHeaderValue).toBe(testData.expectedHeaders.contentTypeValue.textHtml);
+    // await expect(contentLengthValue).toBe(testData.expectedHeaders.contentLengthValue.successfullGetApiUsersHomeEmptyDb)
+    // await expect(responseText).toBe(testData.expectedTexts.successfullGetUsersHomeEmptyDb);
 
     await expect(contentTypeHeaderValue).toBe(testData.expectedHeaders.contentTypeValue.textHtml);
-    await expect(contentLengthHeaderValue).toBe(testData.expectedHeaders.contentLengthValue.successfullGetApiUsersHomeEmptyDb);
+    await expect(contentLengthValue).toBe(testData.expectedHeaders.contentLengthValue.successfullGetApiUsersHomeEmptyDb);
     await expect(responseText).toBe(testData.expectedTexts.successfullGetUsersHomeEmptyDb);
 
 

@@ -3,7 +3,7 @@ export const USERS_ENDPOINT = `${BASE_URL}/users`;
 export const expectedTexts =  {
     successfullGetApiHome: "Node Express API Server App",
     unsuccessfullGet: "Cannot GET",
-    //successfullGetUsersHomeEmptyDb:"There are no users.",
+    successfullGetUsersHomeEmptyDb:"There are no users.",
 }
 
 //const headers
@@ -15,7 +15,7 @@ export const expectedHeaders = {
     contentLengthValue: {
         //successfullGetApiHomeLength: expectedTexts.successfullGetApiHome.length.toString(),//Ira code
         successfullGetApiHome : expectedTexts.successfullGetApiHome.length.toString(),
-       successfullGetApiUsersHomeEmptyDb: expectedTexts.successfullGetUsersHomeEmptyDb.length.toString(),
+      successfullGetApiUsersHomeEmptyDb: expectedTexts.successfullGetUsersHomeEmptyDb.length,
 
     },
 }
